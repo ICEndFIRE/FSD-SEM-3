@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write("HELLO WORLD!<br>","This is a girl who is learning web development.<br>");
+        let name =prompt("ENTER YOUR NAME:");
+        document.write("MY NAME IS :"+name+"<br>");
+        let age =Number(prompt("ENTER YOUR AGE:"));
+        document.write("MY AGE IS :"+age+"<br>");
+        if (age<18){
+            alert("SORRY! YOU ARE NOT ELIGIBLE FOR VOTING.");
+            
+        }
+            else
+{
+                alert("CONGRATULATIONS! YOU ARE ELIGIBLE FOR VOTING.");
+            }
+       confirm("DO YOU WANT TO SAVE THE INFO?");
+       function CALCULATE(){
+        let num1 = Number(prompt("ENTER FIRST NUMBER:"));
+        let num2 = Number(prompt("ENTER SECOND NUMBER:"));
+        let operator = prompt("ENTER OPERATOR (+, -, *, /):");
+        if (operator == "+") {
+            let sum = num1 + num2;
+            document.write("SUM: " + sum + "<br>");
+        } else if (operator == "-") {
+            let difference = num1 - num2;
+            document.write("DIFFERENCE: " + difference + "<br>");
+        } else if (operator == "*") {
+            let product = num1 * num2;
+            document.write("PRODUCT: " + product + "<br>");
+        } else if (operator == "/") {
+            if (num2 !== 0) {
+                let quotient = num1 / num2;
+                document.write("QUOTIENT: " + quotient + "<br>");
+            } else {
+                document.write("ERROR: Division by zero is not allowed.<br>");
+            }
+        } else {
+            document.write("INVALID OPERATOR!<br>");
+        }
+        let sum = num1 + num2;
+       }
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+   <button onclick="CALCULATE()">CALCULATE</button> 
+</body>
+</html>

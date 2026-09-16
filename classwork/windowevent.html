@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openGoogle()">Open Google</button>
+    <button onclick="closewindow()">Close Window</button>
+    <button onclick="movetowindow()">move window</button>
+    <button onclick="movebywindow()">move by window</button>
+</body>
+<script>
+    var a;
+    function openGoogle() {
+        a = window.open('https://www.google.com', "_blank",  "width=800,height=600,top=100,left=100");/*parent for same tab, _blank for new tab,if put nothing by default blank , _self for same tab, _top for topmost tab*/
+   a.document.write("<h1>HELLO WORLD!</h1>");
+    }
+    function closewindow() {
+        a.close();
+    }
+    function movetowindow() {
+        a.moveTo(200, 200);
+        a.focus();
+    }
+    function movebywindow() {
+        a.moveBy(200, 200);
+        a.focus();
+    }
+</script>
+</html>

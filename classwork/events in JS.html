@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events Practice</title>
+
+    <style>
+        #box {
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            margin: 100px 0 30px 200px;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box"
+        onclick="handleClick()"
+        ondblclick="handleDoubleClick()"
+        onmousedown="handleMouseDown()"
+        onmouseup="handleMouseUp()"
+        onmouseover="handleMouseOver()"
+        onmouseout="handleMouseOut()"
+        onmousemove="handleMouseMove()">
+        Box
+    </div>
+
+    <button onclick="changeColor()">Change Color</button>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="resetBox()">Reset</button>
+
+    <script>
+
+        function handleClick() {
+            alert("Single click!");
+        }
+
+        function handleDoubleClick() {
+            alert("Double click!");
+        }
+
+        function handleMouseDown() {
+            console.log("Mouse button is pressed!");
+        }
+
+        function handleMouseUp() {
+            console.log("Mouse button is released!");
+        }
+
+        function handleMouseOver() {
+            console.log("Mouse is over the box!");
+        }
+
+        function handleMouseOut() {
+            console.log("Mouse left the box!");
+        }
+
+        function handleMouseMove() {
+            console.log("Mouse is moving inside the box!");
+        }
+
+        function changeColor() {
+            document.getElementById("box").style.backgroundColor = "pink";
+        }
+
+        function changeText() {
+            document.getElementById("box").innerHTML = "Hello!";
+        }
+
+        function resetBox() {
+            document.getElementById("box").style.backgroundColor = "aqua";
+            document.getElementById("box").innerHTML = "Box";
+        }
+
+    </script>
+
+</body>
+</html>
